@@ -5,15 +5,19 @@
 
 int main(int argc, char *argv[]) {
 	
-	int a; 
+	unsigned int x;
+	int b;
 	
-	printf("input a seconds:");
-	scanf("%i",&a);
+	printf("input a number:");
+	scanf ("%ui",&x);
 	
-	printf("%i seconds - %i:%i \n",a,a/60,a%60);
+	for (b=0; x!=0; x>>=1)
+	{
+		if(x &1)
+			b++;
+	}
 	
-	
-	
+	printf("The result is : %i \n",b);
 	system ("PAUSE");		
 	return 0;
 	
